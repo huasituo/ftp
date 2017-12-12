@@ -1,0 +1,30 @@
+{
+    "name": "huasituo/ftp",
+    "description": "Huasituo Laravel Ftp",
+    "keywords": ["cms", "laravel", "ftp", "huasituo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "HuaSiTuo",
+            "email": "info@huasituo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Huasituo\\Ftp\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huasituo\\Ftp\\FtpServiceProvider"
+            ],
+            "aliases": {
+                "Ftp": "Huasituo\\Ftp\\Facades\\Ftp"
+            }
+        }
+    }
+}
