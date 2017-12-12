@@ -2,7 +2,9 @@
 
 namespace Huasituo\Ftp;
 
-use Huasituo\Hook\Contracts\Repository;
+// use Huasituo\Ftp\Contracts\Repository;
+use Huasituo\Ftp\Providers\RouteServiceProvider;
+use Huasituo\Ftp\Providers\LibrariesServiceProvider;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -28,9 +30,13 @@ class FtpServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/ftp.php', 'ftp'
         );
+        $this->app->register(RouteServiceProvider::class);
+        $this->app->register(LibrariesServiceProvider::class);
+
         $this->app->singleton('ftp', function ($app) {
-            $repository = $app->make(Repository::class);
-            return new FtpConnection($app, $repository);
+            //$repository = $app->make(Repository::class);
+            return new Ftp($app);
+            //return new Ftp($app, $repository);
         });
     }
 

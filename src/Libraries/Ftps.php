@@ -2,7 +2,7 @@
 
 namespace Huasituo\Ftp\Libraries;
 
-class Ftp {
+class Ftps {
 
 	/**
 	 * type name for files
