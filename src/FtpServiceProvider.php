@@ -2,7 +2,6 @@
 
 namespace Huasituo\Ftp;
 
-// use Huasituo\Ftp\Contracts\Repository;
 use Huasituo\Ftp\Providers\RouteServiceProvider;
 use Huasituo\Ftp\Providers\LibrariesServiceProvider;
 
@@ -34,9 +33,7 @@ class FtpServiceProvider extends ServiceProvider
         $this->app->register(LibrariesServiceProvider::class);
 
         $this->app->singleton('ftp', function ($app) {
-            //$repository = $app->make(Repository::class);
             return new Ftp($app);
-            //return new Ftp($app, $repository);
         });
     }
 
