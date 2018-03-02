@@ -36,7 +36,7 @@ class FtpConfigHook
     public function getCommonRoleUri($data)
     {
         $data['manageFtpIndex'] = [
-            'name' => hst_lang('ftp::public.ftp'),
+            'name' => hst_lang('ftp::public.ftp.setting'),
             'remark' => 'ftp',
             'ename' => 'manageFtpIndex',
             'uri' => 'ftp/index',
@@ -48,7 +48,7 @@ class FtpConfigHook
             'remark' => 'ftp',
             'ename' => 'manageFtpSave',
             'uri' => 'ftp/save',
-            'parent' => 'manageFtpSave',
+            'parent' => 'manageFtpIndex',
             'module' => 'ftp'
         ];
         return $data;

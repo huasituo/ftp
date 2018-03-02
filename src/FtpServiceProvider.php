@@ -19,6 +19,7 @@ class FtpServiceProvider extends ServiceProvider
             __DIR__.'/../config/ftp.php' => config_path('ftp.php'),
         ], 'config');
         $this->loadTranslationsFrom(__DIR__.'/../translations', 'ftp');
+        $this->loadViewsFrom(__DIR__.'/../views', 'ftp');
     }
 
     /**

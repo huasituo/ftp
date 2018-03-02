@@ -1,6 +1,7 @@
 <?php 
 
 namespace Huasituo\Ftp\Http\Controllers\Manage;
+use Huasituo\Hstcms\Http\Controllers\Manage\BasicController;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;

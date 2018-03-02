@@ -2,12 +2,12 @@
 
 namespace Huasituo\Ftp\Http\Controllers;
 
-use Huasituo\Ftp\Http\Controllers\Controller ;
+use Huasituo\Hstcms\Http\Controllers\BasicController as BaseController;
 use Illuminate\Http\Request;
 
 use Ftp;
 
-class TestController extends Controller
+class TestController extends BaseController
 {
 
     public function index() 
